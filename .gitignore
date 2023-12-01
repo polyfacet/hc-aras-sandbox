@@ -1,3 +1,4 @@
 scripts/deploy/stage.log
 scripts/deploy/stage/**
 scripts/deploy/Deploy**
+**/log/*
