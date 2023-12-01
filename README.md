@@ -12,3 +12,22 @@ The project will be target the latest public(free) available release of Aras Inn
 
 - Extracting the incremental changes from git
 - Creating a deploy package for an increment
+
+## Sub pages
+
+[Git cheat sheet](./docs/git_cheat_sheet.md)
+
+## Troubleshooting
+
+### Trouble executing powershell scripts
+
+You might encounter issue with executing these powershell scripts, with errors like this:
+
+``` log
+.\stage_git.ps1: File ...\stage_git.ps1 cannot be loaded. The file ...deploy\stage_git.ps1 is not digitally signed. You cannot run this script on the current system. For more information about running scripts and setting execution policy, see about_Execution_Policies at https://go.microsoft.com/fwlink/?LinkID=135170.
+```
+
+#### Solution
+
+1. Start Windows PowerShell with the "Run as Administrator" option. Only members of the Administrators group on the computer can change the execution policy.
+2. Set-ExecutionPolicy RemoteSigned

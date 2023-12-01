@@ -1,0 +1,68 @@
+#!/bin/bash
+
+## COPY this to {repo}/.git/hooks
+
+# Checks if a commit message in a a/Issue-XXX/title branch contains Issue-XXX
+# If not return error.
+
+TERMINAL_COLOR_CLEAR='\033[0m'
+TERMINAL_COLOR_ERROR='\033[1;31m'
+TERMINAL_COLOR_GREEN='\033[1;32m'
+BRANCH_PREFIX_TO_CHECK="a"
+
+echo_error() {
+  echo -e "${TERMINAL_COLOR_ERROR}$1${TERMINAL_COLOR_CLEAR}"
+}
+
+echo_ok() {
+  echo -e "${TERMINAL_COLOR_GREEN}$1${TERMINAL_COLOR_CLEAR}"
+}
+
+###
+# Checks if first parmeter contains second parameter 
+###
+str_contains() {
+  local res=false
+  if [[ "$1" == *"$2"* ]]; then
+    res=true
+  fi
+  echo "$res"
+}
+
+echo "Checking if a commit in a i/Issue-XXX/title branch contains Issue-XXX"
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+MESSAGE=$(cat $1) 
+
+# Split the parts of the branch name into array
+IFS='/'
+read -a branch_name_sections <<< $BRANCH
+
+number_of_branch_sections=${#branch_name_sections[*]}
+
+if [ $number_of_branch_sections \> 1 ]
+then
+    first_section=${branch_name_sections[0]}
+    second_section=${branch_name_sections[1]}
+else 
+    exit 0
+fi
+
+if [[ "$first_section" != "$BRANCH_PREFIX_TO_CHECK" ]]
+then
+    echo "Not controlled branch"
+    exit 0
+fi
+
+echo "Checking if commit message contains ${branch_name_sections[1]}"
+
+contains_res=$(str_contains "$MESSAGE" "$second_section")
+if [ $contains_res == true ]
+then
+    echo_ok "It's there."
+else
+    echo_error "Missing $second_section in message. COMMIT was stopped"
+    exit 1
+fi
+
+exit 0
