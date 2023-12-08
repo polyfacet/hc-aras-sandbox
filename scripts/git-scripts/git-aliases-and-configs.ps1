@@ -5,8 +5,9 @@ git config --global pull.rebase true
 git config --global diff.colorMoved zebra
 
 # Logs "functional" changes. If conventional commits are applied, this filters out the changes
-# that matters most from and end user perspective. Commit messages starting with feat/fix/cr
-git config --global alias.ll "log --grep='^feat\|^fix\|^cr' --oneline"
+# that matters most from and end user perspective. Commit messages starting with feat/fix/cr/perf
+# Use like "git rl master..HEAD | sort" to 
+git config --global alias.rl "log --pretty=\"%s%\" master..HEAD --grep='^cr\|^feat\|^fix\|^perf'"
 
 # commit with add and message
 git config --global alias.cm 'commit -am'
