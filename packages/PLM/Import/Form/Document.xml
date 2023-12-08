@@ -440,6 +440,16 @@
     <sort_order>512</sort_order>
     <source_id keyed_name="Document" type="Form">D95D1B10CE6D47CDB7AE755108DBA13D</source_id>
    </Item>
+   <Item type="Form Event" id="043BF2598DEA4F64A4F1340E7DC6D64B" action="add">
+    <form_event>onformpopulated</form_event>
+    <related_id keyed_name="hc_hideNonEditableFields" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>hc_hideNonEditableFields</name>
+     </Item>
+    </related_id>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="Document" type="Form">D95D1B10CE6D47CDB7AE755108DBA13D</source_id>
+   </Item>
    <Item type="Form Event" id="9B63AF94B4224FCCBCACD0826A9A84FE" action="add">
     <form_event>onload</form_event>
     <related_id keyed_name="PE_AttachCreateNewRevBtnClkEvent" type="Method">

@@ -3,6 +3,7 @@
 ## Implemented features
 
 - Hide non-editable field in form (alternative to have Add/Update and View forms)
+    On: Part, Document
 
 ## Roadmap
 
