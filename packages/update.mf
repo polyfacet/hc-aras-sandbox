@@ -2,4 +2,5 @@
   <package name="com.aras.innovator.solution.PLM" path="PLM\Import">
     <dependson name="com.aras.innovator.solution.ApplicationCore" />
   </package>
+  <package name="se.hilleconsultit.hc_core" path="hc_core\Import" />
 </imports>

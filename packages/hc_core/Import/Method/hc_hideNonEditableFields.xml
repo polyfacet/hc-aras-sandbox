@@ -1,0 +1,31 @@
+﻿<AML>
+ <Item type="Method" id="610AE9DEC0FE4C919829C6709CAD1F98" action="add">
+  <comments>Hides non editable field in form at add/edit</comments>
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[// console.log("hc_hideNonEditableFields");
+
+let isEditMode = parent.isEditMode
+
+const classDisablingFormFields = "aras-form-field_disabled";
+const classNameToRemove = "sys_f_container";
+const disabledFields =  document.getElementsByClassName(classDisablingFormFields);
+
+for (let i = 0; i<disabledFields.length; i++) {
+    let disabledField = disabledFields[i];
+    const name = disabledField.getAttribute("name");
+    // console.log({name});
+    if (isEditMode) {
+        disabledField.hidden = true;
+        disabledField.classList.remove(classNameToRemove);
+    }
+    else {
+        disabledField.hidden = false;
+        disabledField.classList.add(classNameToRemove);
+    }
+}    
+
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>hc_hideNonEditableFields</name>
+ </Item>
+</AML>
