@@ -85,7 +85,7 @@
       <font_size>8pt</font_size>
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
-      <is_visible>1</is_visible>
+      <is_visible>0</is_visible>
       <label xml:lang="en">Control Type</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
@@ -198,7 +198,7 @@
       <font_size>8pt</font_size>
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
-      <is_visible>1</is_visible>
+      <is_visible>0</is_visible>
       <label xml:lang="en">Effective Date</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
@@ -313,7 +313,7 @@
       <font_size>8pt</font_size>
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
-      <is_visible>1</is_visible>
+      <is_visible>0</is_visible>
       <label xml:lang="en">Designated User</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
