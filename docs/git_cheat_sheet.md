@@ -10,8 +10,11 @@ For this reasons this document will contain some useful git commands.
     - [More detailed and prettier commit log](#more-detailed-and-prettier-commit-log)
     - [List changed (Added/Modified/Deleted) files](#list-changed-addedmodifieddeleted-files)
 - [Rebasing](#rebasing)
+- [View changes for specific files](#view-changes-for-specific-files)
+- [Searching](#searching)
+  - [Searching commit messages](#searching-commit-messages)
+  - [Searching changed contents](#searching-changed-contents)
 - [References](#references)
-
 
 ## Comparing states
 
@@ -129,7 +132,50 @@ git push --force-with-lease
 
 ```
 
+## View changes for specific files
+
+The base for this is "git log"
+
+To view the changes done for a specific file:
+git log -- src/packages/PLM/Import/Method/PE_ManualRelease.xml
+
+Even simpler - which also shows moved file:
+git log -- *PE_ManualRelease.xml
+
+To include the changes in each change, use the patch flag:
+git log -p -- src/packages/PLM/Import/Method/PE_ManualRelease.xml
+git log -p -- *PE_ManualRelease.xml
+
+As I think the "log" is kind of difficult to read, I rather use an alternative alias "l" for log like:
+git l -- *PE_ManualRelease.xml
+
+Set the alias with:
+git config --global alias.l "log --pretty='format:%Cblue%cr %Creset%s %Cblue%an %Cred%d %Cgreen%h'"
+
+Another example:
+This shows all the changed "PLM" methods that are named like "Action" and which files that were changed in each commit:
+git l --name-status -- src/packages/PLM/Import/Method/*Action*
+
+## Searching
+
+### Searching commit messages
+
+Set the alias "find":
+git config --global alias.find "log -i --pretty=\"format:%Cgreen%h %Cred%cr %Cblue%s %Cred%an\" --name-status --grep"
+
+To find commit messages having Issue-1628
+git find Issue-1628
+
+### Searching changed contents
+
+Below is two example for typically find code changes that contains "Part Document" and "team_id", i.e. item.getRelationships("Part Document") or item.setProperty("team_id")
+
+git log --oneline -S '"Part Document"' -i
+git log --oneline -S '"team_id"'
+
+-S is called the "pickaxe", and -i is used to make the search case insensitive.
 
 ## References
 
 1. [About git fetch (Atlassian)](https://www.atlassian.com/git/tutorials/syncing/git-fetch#:~:text=In%20review%2C%20git%20fetch%20is,the%20state%20of%20a%20remote.)
+2. [Git Pickaxe](https://gist.github.com/phil-blain/2a1cf81a0030001d33158e44a35ceda6)
