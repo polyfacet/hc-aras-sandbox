@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="HC_Inventory" id="0C628D8ED75C457895583CB79BA72728" action="add">
+  <classification>Hardware</classification>
+  <designation>Corsair Vengeance LPX Black 16GB (2x8GB)</designation>
+  <notes>Corsair Vengeance LPX Black 16GB (2x8GB)
+RAM Teknik:	DDR4 SDRAM
+Minneshastighet:	2400 MHz
+RAM for desktop computer</notes>
+  <purchase_date>2024-01-05T00:00:00</purchase_date>
+  <purchase_price>599</purchase_price>
+  <item_number>INV0001</item_number>
+  <description>RAM Memory</description>
+ </Item>
+</AML>

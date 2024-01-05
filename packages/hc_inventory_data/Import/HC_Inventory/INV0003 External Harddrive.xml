@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="HC_Inventory" id="BAFDB8BFC894412BA5F4264AB5414549" action="add">
+  <classification>Hardware</classification>
+  <designation>WDBU6Y0020BBK</designation>
+  <notes>WD Elements Portable - 2TB</notes>
+  <purchase_date>2024-01-05T00:00:00</purchase_date>
+  <purchase_price>949</purchase_price>
+  <item_number>INV0002</item_number>
+  <description>External Harddrive</description>
+ </Item>
+</AML>

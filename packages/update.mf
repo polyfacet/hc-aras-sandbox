@@ -1,3 +1,6 @@
 <imports>
   <package name="se.hilleconsultit.hc_inventory" path="hc_inventory\Import" />
+  <package name="se.hilleconsultit.hc_inventory_data" path="hc_inventory_data\Import">
+    <dependson name="se.hilleconsultit.hc_inventory" />
+  </package>
 </imports>
