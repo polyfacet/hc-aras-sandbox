@@ -1,0 +1,126 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="0EAF853C9DC5425FAA2D8CEDE81FB69B" action="add">
+  <description>Inventory LFCY</description>
+  <start_state keyed_name="New" type="Life Cycle State">533355C5311743CD97F8EB55A8A7E159</start_state>
+  <name>HC_Inventory</name>
+  <Relationships>
+   <Item type="Life Cycle State" id="7054437F2B4D4181AC375A71DA914BFC" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</source_id>
+    <x>151</x>
+    <y>76</y>
+    <name>In Stock</name>
+   </Item>
+   <Item type="Life Cycle State" id="4C2ADA66F259448D86C425C3FF8280F4" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</source_id>
+    <x>285</x>
+    <y>74</y>
+    <name>In Use</name>
+   </Item>
+   <Item type="Life Cycle State" id="533355C5311743CD97F8EB55A8A7E159" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</source_id>
+    <x>54</x>
+    <y>76</y>
+    <name>New</name>
+   </Item>
+   <Item type="Life Cycle State" id="3DF5B74494C5403F83B0C4CFD95E7C0B" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</source_id>
+    <x>410</x>
+    <y>73</y>
+    <name>Scraped</name>
+   </Item>
+   <Item type="Life Cycle Transition" id="E92FCB6C0DCD46A8824310A87A9917BA" action="add">
+    <from_state keyed_name="Scraped" type="Life Cycle State">3DF5B74494C5403F83B0C4CFD95E7C0B</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</role>
+    <segments>495,82|496,136|266,139</segments>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</source_id>
+    <to_state keyed_name="In Stock" type="Life Cycle State">7054437F2B4D4181AC375A71DA914BFC</to_state>
+    <x>-64</x>
+    <y>68</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="413FDAEB19D94BDF9BD17B5A249A9F55" action="add">
+    <from_state keyed_name="In Use" type="Life Cycle State">4C2ADA66F259448D86C425C3FF8280F4</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <segments>295,46|203,47</segments>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</source_id>
+    <to_state keyed_name="In Stock" type="Life Cycle State">7054437F2B4D4181AC375A71DA914BFC</to_state>
+    <x>-64</x>
+    <y>-24</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="A7524F1F89CA464EB077C489D5124EC3" action="add">
+    <from_state keyed_name="In Use" type="Life Cycle State">4C2ADA66F259448D86C425C3FF8280F4</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</source_id>
+    <to_state keyed_name="Scraped" type="Life Cycle State">3DF5B74494C5403F83B0C4CFD95E7C0B</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="86CF778053C341D4AF0741C2950771CB" action="add">
+    <from_state keyed_name="New" type="Life Cycle State">533355C5311743CD97F8EB55A8A7E159</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</source_id>
+    <to_state keyed_name="In Stock" type="Life Cycle State">7054437F2B4D4181AC375A71DA914BFC</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="69A36D55857344F0B2706B6BA967D189" action="add">
+    <from_state keyed_name="In Stock" type="Life Cycle State">7054437F2B4D4181AC375A71DA914BFC</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</source_id>
+    <to_state keyed_name="In Use" type="Life Cycle State">4C2ADA66F259448D86C425C3FF8280F4</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="EE93DECA25DB4CD8AC04661FFC8DA486" action="add">
+    <from_state keyed_name="In Stock" type="Life Cycle State">7054437F2B4D4181AC375A71DA914BFC</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <segments>161,11|422,10</segments>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</source_id>
+    <to_state keyed_name="Scraped" type="Life Cycle State">3DF5B74494C5403F83B0C4CFD95E7C0B</to_state>
+    <x>79</x>
+    <y>-62</y>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,213 @@
+﻿<AML>
+ <Item type="Form" id="49BDA9B363DC455887CFA9EEDA6C315B" action="add">
+  <height>300</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>699</width>
+  <name>HC_Inventory</name>
+  <Relationships>
+   <Item type="Body" id="F4A8CDF5DDE9464E8B7ED7941CA7E358" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="HC_Inventory" type="Form">49BDA9B363DC455887CFA9EEDA6C315B</source_id>
+    <Relationships>
+     <Item type="Field" id="71A29D0FEEFF40D79FEFA17D7C16056C" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>class structure</field_type>
+      <font_color>#333333</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Classification</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="F4A8CDF5DDE9464E8B7ED7941CA7E358" type="Body">F4A8CDF5DDE9464E8B7ED7941CA7E358</source_id>
+      <tab_index>128</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>200</x>
+      <y>10</y>
+      <name>classification</name>
+     </Item>
+     <Item type="Field" id="B3AC2C93752D4735A545B90D7E7F8313" action="add">
+      <border_width>0</border_width>
+      <display_length>300</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#333333</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Description</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="description" type="Property">8FC07EBCE5F44EADA7A5BB088022C87B</propertytype_id>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="F4A8CDF5DDE9464E8B7ED7941CA7E358" type="Body">F4A8CDF5DDE9464E8B7ED7941CA7E358</source_id>
+      <tab_index>3200</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>50</x>
+      <y>50</y>
+      <name>description</name>
+     </Item>
+     <Item type="Field" id="FBA8308696C04B409CBA8110C5CBB7A5" action="add">
+      <border_width>0</border_width>
+      <display_length>300</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#333333</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Designation</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="designation" type="Property">63977C5F5B8F4A96AF6668FB4ADC2DD0</propertytype_id>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="F4A8CDF5DDE9464E8B7ED7941CA7E358" type="Body">F4A8CDF5DDE9464E8B7ED7941CA7E358</source_id>
+      <tab_index>3456</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>50</x>
+      <y>90</y>
+      <name>designation</name>
+     </Item>
+     <Item type="Field" id="BB09DCD5A477419F968294668F5FF68B" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#333333</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Item Number</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="item_number" type="Property">3DF76AF53D694C1CB90D13E4E186D104</propertytype_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="F4A8CDF5DDE9464E8B7ED7941CA7E358" type="Body">F4A8CDF5DDE9464E8B7ED7941CA7E358</source_id>
+      <tab_index>3072</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>50</x>
+      <y>10</y>
+      <name>item_number</name>
+     </Item>
+     <Item type="Field" id="CB55FE6F73F04EAFAAE77D60D6FE5688" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#333333</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Notes</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="notes" type="Property">1D84FD8220024D1B88167C7CF839CD5A</propertytype_id>
+      <sort_order>1024</sort_order>
+      <source_id keyed_name="F4A8CDF5DDE9464E8B7ED7941CA7E358" type="Body">F4A8CDF5DDE9464E8B7ED7941CA7E358</source_id>
+      <tab_index>3328</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>500</textarea_cols>
+      <textarea_rows>120</textarea_rows>
+      <x>50</x>
+      <y>140</y>
+      <name>notes</name>
+     </Item>
+     <Item type="Field" id="4706B6DB446443EEAFF2D4F3DCA53D3A" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>date</field_type>
+      <font_color>#333333</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Purchase Date</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="purchase_date" type="Property">B1F64A15311542A49B74795CEFE1BB15</propertytype_id>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="F4A8CDF5DDE9464E8B7ED7941CA7E358" type="Body">F4A8CDF5DDE9464E8B7ED7941CA7E358</source_id>
+      <tab_index>3584</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>450</x>
+      <y>50</y>
+      <name>purchase_date</name>
+     </Item>
+     <Item type="Field" id="634B69CFE92B469696B3A5E181F34EDA" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>file item</field_type>
+      <font_color>#333333</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Receipt</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="receipt" type="Property">B9B4233168E045928745A969922FDA6B</propertytype_id>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="F4A8CDF5DDE9464E8B7ED7941CA7E358" type="Body">F4A8CDF5DDE9464E8B7ED7941CA7E358</source_id>
+      <tab_index>3712</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>450</x>
+      <y>90</y>
+      <name>receipt</name>
+     </Item>
+     <Item type="Field" id="F3178A8E5F224B33AA31DD1EF6C2E8DE" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#333333</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">state</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="F4A8CDF5DDE9464E8B7ED7941CA7E358" type="Body">F4A8CDF5DDE9464E8B7ED7941CA7E358</source_id>
+      <tab_index>1408</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>350</x>
+      <y>10</y>
+      <name>state</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="Field" id="71A29D0FEEFF40D79FEFA17D7C16056C" action="edit">
+  <!-- Please note: this AML depends on the "HC_Inventory" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>classification</name>
+    <source_id type="ItemType" keyed_name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+ <Item type="Field" id="F3178A8E5F224B33AA31DD1EF6C2E8DE" action="edit">
+  <!-- Please note: this AML depends on the "HC_Inventory" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>state</name>
+    <source_id type="ItemType" keyed_name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+</AML>

@@ -1,0 +1,248 @@
+﻿<AML>
+ <Item type="ItemType" id="32F6A10EEF5C4F48ABE88713961B44CA" action="add">
+  <allow_private_permission>1</allow_private_permission>
+  <auto_search>1</auto_search>
+  <class_structure><![CDATA[<class id="32F6A10EEF5C4F48ABE88713961B44CA"><class id="63570B6DD3434D748E74190FEB090FAF" name="Hardware" /><class id="49C8DF598F364C7B83FE1383FD02876E" name="Software" /></class>]]></class_structure>
+  <default_page_size>30</default_page_size>
+  <enforce_discovery>1</enforce_discovery>
+  <hide_where_used>0</hide_where_used>
+  <history_template keyed_name="Default" type="History Template">3BC16EF9E52B4F9792AB76BCE0492F29</history_template>
+  <implementation_type>table</implementation_type>
+  <instance_data>HC_INVENTORY</instance_data>
+  <is_dependent>0</is_dependent>
+  <is_relationship>0</is_relationship>
+  <is_versionable>1</is_versionable>
+  <label xml:lang="en">Inventory</label>
+  <label_plural xml:lang="en">Inventories</label_plural>
+  <large_icon>../images/Overconsumed.svg</large_icon>
+  <manual_versioning>0</manual_versioning>
+  <open_icon>../images/Overconsumed.svg</open_icon>
+  <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+  <show_parameters_tab>1</show_parameters_tab>
+  <structure_view>tabs off</structure_view>
+  <unlock_on_logout>0</unlock_on_logout>
+  <use_src_access>0</use_src_access>
+  <name>HC_Inventory</name>
+  <Relationships>
+   <Item type="ITPresentationConfiguration" id="B2D04F679D9348B69858A7077B2B90EB" action="add">
+    <client>js</client>
+    <related_id keyed_name="HC_Inventory_TOC_Configuration" type="PresentationConfiguration">035C39C1F2D2484B97B883C41F06D23D</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+   </Item>
+   <Item type="Property" id="8FC07EBCE5F44EADA7A5BB088022C87B" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>200</column_width>
+    <data_type>string</data_type>
+    <is_federated>0</is_federated>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <keyed_name_order>1</keyed_name_order>
+    <label xml:lang="en">Description</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <stored_length>256</stored_length>
+    <track_history>0</track_history>
+    <name>description</name>
+   </Item>
+   <Item type="Property" id="63977C5F5B8F4A96AF6668FB4ADC2DD0" action="add">
+    <column_alignment>left</column_alignment>
+    <data_type>string</data_type>
+    <is_federated>0</is_federated>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Designation</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <stored_length>128</stored_length>
+    <track_history>0</track_history>
+    <name>designation</name>
+   </Item>
+   <Item type="Property" id="3DF76AF53D694C1CB90D13E4E186D104" action="add">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="HC_Inventory">A732F8B9EA1A49B081A99F1FC74B5E6F</data_source>
+    <data_type>sequence</data_type>
+    <is_federated>0</is_federated>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <keyed_name_order>0</keyed_name_order>
+    <label xml:lang="en">Item Number</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <track_history>0</track_history>
+    <name>item_number</name>
+   </Item>
+   <Item type="Property" id="1D84FD8220024D1B88167C7CF839CD5A" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>300</column_width>
+    <data_type>text</data_type>
+    <is_federated>0</is_federated>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Notes</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <track_history>0</track_history>
+    <name>notes</name>
+   </Item>
+   <Item type="Property" id="B1F64A15311542A49B74795CEFE1BB15" action="add">
+    <column_alignment>left</column_alignment>
+    <data_type>date</data_type>
+    <is_federated>0</is_federated>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Purchase Date</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <track_history>0</track_history>
+    <name>purchase_date</name>
+   </Item>
+   <Item type="Property" id="B9B4233168E045928745A969922FDA6B" action="add">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="File" type="ItemType" name="File">8052A558B9084D41B9F11805E464F443</data_source>
+    <data_type>item</data_type>
+    <is_federated>0</is_federated>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Receipt</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <track_history>0</track_history>
+    <name>receipt</name>
+   </Item>
+   <Item type="View" id="FF251CF6D4B342A29DB7A340AD21C9B7" action="add">
+    <client>js</client>
+    <related_id keyed_name="HC_Inventory" type="Form">49BDA9B363DC455887CFA9EEDA6C315B</related_id>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <show_ssvc>0</show_ssvc>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <type>default</type>
+   </Item>
+   <Item type="ItemType Life Cycle" id="FEAAA6B93FC2444BB3EFDA62405F35D3" action="add">
+    <related_id keyed_name="HC_Inventory" type="Life Cycle Map">0EAF853C9DC5425FAA2D8CEDE81FB69B</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+   </Item>
+   <Item type="Can Add" id="E1EAB75C6716457D8C4F3A40ECA6A750" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+   </Item>
+   <Item type="Allowed Permission" id="44C5DAFEF47F4A5D858D81F92C14CAE9" action="add">
+    <is_default>1</is_default>
+    <related_id keyed_name="HC_Inventory" type="Permission">2281499EE5A1451AB37A9C8923004394</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="ItemType" id="32F6A10EEF5C4F48ABE88713961B44CA" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='32F6A10EEF5C4F48ABE88713961B44CA' and name='modified_on'">
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_type>date</data_type>
+    <is_federated>0</is_federated>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Modified On</label>
+    <pattern>short_date_time</pattern>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>4024</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <track_history>0</track_history>
+    <name>modified_on</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='32F6A10EEF5C4F48ABE88713961B44CA' and name='state'">
+    <column_alignment>left</column_alignment>
+    <data_type>string</data_type>
+    <is_federated>0</is_federated>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">State</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>3300</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <stored_length>32</stored_length>
+    <track_history>0</track_history>
+    <name>state</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='32F6A10EEF5C4F48ABE88713961B44CA' and name='superseded_date'">
+    <column_alignment>left</column_alignment>
+    <data_type>date</data_type>
+    <is_federated>0</is_federated>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Superseded Date</label>
+    <pattern>short_date_time</pattern>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <track_history>0</track_history>
+    <name>superseded_date</name>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

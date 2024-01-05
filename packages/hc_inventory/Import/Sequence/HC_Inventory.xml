@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="Sequence" id="A732F8B9EA1A49B081A99F1FC74B5E6F" action="add">
+  <initial_value>0</initial_value>
+  <pad_to>4</pad_to>
+  <pad_with>0</pad_with>
+  <prefix>INV</prefix>
+  <step>1</step>
+  <name>HC_Inventory</name>
+ </Item>
+</AML>

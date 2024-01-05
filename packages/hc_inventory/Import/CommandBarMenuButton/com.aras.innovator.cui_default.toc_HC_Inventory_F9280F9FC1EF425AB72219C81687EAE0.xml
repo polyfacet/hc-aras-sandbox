@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="F9280F9FC1EF425AB72219C81687EAE0" action="add">
+  <additional_data>{"itemTypeId":"32F6A10EEF5C4F48ABE88713961B44CA"}</additional_data>
+  <image>../images/Overconsumed.svg</image>
+  <label xml:lang="en">Inventories</label>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.toc_09471F5D71FD47F0B039BB06DB2CD293" type="CommandBarMenu">09471F5D71FD47F0B039BB06DB2CD293</parent_menu>
+  <name>com.aras.innovator.cui_default.toc_HC_Inventory_F9280F9FC1EF425AB72219C81687EAE0</name>
+ </Item>
+</AML>
