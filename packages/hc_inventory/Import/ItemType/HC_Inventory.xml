@@ -127,6 +127,24 @@
     <track_history>0</track_history>
     <name>purchase_date</name>
    </Item>
+   <Item type="Property" id="B7C2A305F04145ADA720BF60F58F4DFE" action="add">
+    <column_alignment>left</column_alignment>
+    <data_type>integer</data_type>
+    <is_federated>0</is_federated>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Purchase Price (SEK)</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
+    <track_history>0</track_history>
+    <name>purchase_price</name>
+   </Item>
    <Item type="Property" id="B9B4233168E045928745A969922FDA6B" action="add">
     <column_alignment>left</column_alignment>
     <data_source keyed_name="File" type="ItemType" name="File">8052A558B9084D41B9F11805E464F443</data_source>
