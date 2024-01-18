@@ -14,6 +14,7 @@ For this reasons this document will contain some useful git commands.
 - [Searching](#searching)
   - [Searching commit messages](#searching-commit-messages)
   - [Searching changed contents](#searching-changed-contents)
+- ["Local" gitignore](#local-gitignore)
 - [References](#references)
 
 ## Comparing states
@@ -175,7 +176,14 @@ git log --oneline -S '"team_id"'
 
 -S is called the "pickaxe", and -i is used to make the search case insensitive.
 
+## "Local" gitignore
+
+Use case: I want to have a basic todo.txt file in the root of my project/git repo, so quickly jot down some todo-notes, but I don't want to add todo.txt to the common .gitignore. I.e. pollute it with ignores of my personal workflow.  
+For this we can use the `.git/info/exclude` file. It has the same format as the common .gitignore
+So just add todo.txt to the exclude file and thats it.
+
 ## References
 
 1. [About git fetch (Atlassian)](https://www.atlassian.com/git/tutorials/syncing/git-fetch#:~:text=In%20review%2C%20git%20fetch%20is,the%20state%20of%20a%20remote.)
 2. [Git Pickaxe](https://gist.github.com/phil-blain/2a1cf81a0030001d33158e44a35ceda6)
+3. [Git ignore local](https://stackoverflow.com/questions/1753070/how-do-i-configure-git-to-ignore-some-files-locally)
