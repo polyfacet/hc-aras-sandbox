@@ -17,6 +17,7 @@ The project will be target the latest public(free) available release of Aras Inn
 
 - [Git cheat sheet](./docs/git_cheat_sheet.md)
 - [Using git in Aras customization development](./docs/git_and_aras.md)
+- [Plans for this repo](./docs/plans.md)
 
 ## Troubleshooting
 
