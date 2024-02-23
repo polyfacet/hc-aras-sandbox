@@ -41,7 +41,7 @@ Quoted from the book:
 
 With this in mind - and conventional commits, see below - a good commit message would be look something like:
 
-> cr(Article): Allows users to delete a new Part
+> cr(Part): Allows users to delete a new Part
 >
 > The users had access to do delete the Part, but it was used in an Part Commercial Name.
 > This Part Commercial Name, will now be implicitly deleted before the deletion of the Part
@@ -54,10 +54,10 @@ The first row is the title, the "body" provides some details about the implement
 
 An adjustment to this convention could maybe be, to include the Issue reference in the title like:
 
-> cr(Article): Allows users to delete a new Article (Issue-555)
+> cr(Part): Allows users to delete a new Part (Issue-555)
 
 Since I know how bad/careless people generally are at writing documentation.
-My experience is however that it is not the content of an issue (normally a Jira Issue) that provides the information you need when investigating a change. The case is all to often to get information about who where involved in the issue. I.e. had the "requirements"/intents of it. As the specifications in the issues are not trustworthy, because the specification may have changed during the development or at some other point in time. But no one bother to update the specification, because the change was agreed in "fire camp"-meeting. So you will need to find the information stored in some carbon-based hard drive.
+My experience is however that it is not the content of an issue (normally a Jira Issue) that provides the information you need when investigating a change. The case is all to often to get information about who where involved in the issue. I.e. had the "requirements"/intents of it. As the specifications in the issues are not trustworthy, because the specification may have changed during the development or at some other point in time. But no one bothered to update the specification, because the change was agreed in "fire camp"-meeting. So you will need to find the information stored in some carbon-based hard drive.
 
 ### Convectional commit types
 
@@ -137,10 +137,10 @@ So what is the alternative to merge requests?
 I would suggest a hybrid model. A model that mixes [trunk based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development), a lightweight [pair programming](https://en.wikipedia.org/wiki/Pair_programming) and [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) (for hotfixes).  
 It may sound complicated, but the purpose is to [keep it simple](https://en.wikipedia.org/wiki/KISS_principle).
 In short, it is an agile approach, to handle changes differently depending on the context.
-With this approach the dev/main branch and the common development will represent the "truth/latest and greatest". And when you reach the end of a development cycle - or any time during the cycle - it is easy to merge/update uat with the "latest and greatest".  
+With this approach the dev/main branch and the common development will represent the "truth/latest and greatest". And when you reach the end of a development cycle - or any time during the cycle - it is easy to merge/update User Acceptance Test (UAT) environment with the "latest and greatest".  
 To use the same examples as mentioned above. The context is important.  
 The change of the label in the Form, just commit/sync the change directly to dev/main, it is a trivial change.  
-If a change is complicated/not straight forward or being a "junior" developer, make a preemptive peer review early on, discuss a drafted solution via an Action Request branch with another developer. This is what I mean by lightweight pair programming. We will have the benefits of mitigate the risk of a bad design decision, get an early review when the developer is fully focused on the task and knowledge spreading.  
+If a change is complicated/not straight forward or being a "junior" developer, make a preemptive peer review early on, discuss a drafted solution via an "Issue" branch with another developer. This is what I mean by lightweight pair programming. We will have the benefits of mitigate the risk of a bad design decision, get an early review when the developer is fully focused on the task and knowledge spreading.  
 And in the case where something bad is committed to the dev/main branch, there are a few ways to solve it - which again depends on the context.
 
 1. Fix it
