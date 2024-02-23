@@ -45,7 +45,10 @@ These from to can be replace with any other branch names or commits like:
 
 ``` bash
 # Example output (with --no-merges flag)
-🔴
+Tomas Andersson (3):
+      feat(Inventory): Draft Inventory Basics
+      cr(Inventory): Adds Purchase Price to type and form
+      data(Inventory): Import some example data    
 ```
 
 #### Commit log
@@ -57,7 +60,9 @@ git log --oneline --no-merges origin/master..origin/develop
 
 ``` bash
 # Output example
-🔴
+bae0636 (origin/poc/hc_inventory, poc/hc_inventory) data(Inventory): Import some example data
+2abcc6b cr(Inventory): Adds Purchase Price to type and form
+bcbefb0 feat(Inventory): Draft Inventory Basics
 ```
 
 #### More detailed and prettier commit log
@@ -73,7 +78,9 @@ git l --no-merges origin/master..origin/develop
 
 ``` bash
 # Output example
-🔴
+5 weeks ago data(Inventory): Import some example data Tomas Andersson  (origin/poc/hc_inventory, poc/hc_inventory) bae0636
+5 weeks ago cr(Inventory): Adds Purchase Price to type and form Tomas Andersson  2abcc6b
+5 weeks ago feat(Inventory): Draft Inventory Basics Tomas Andersson  bcbefb0
 ```
 
 #### List changed (Added/Modified/Deleted) files
@@ -86,7 +93,22 @@ git log --name-status --pretty="" origin/master..origin/develop
 
 ``` bash
 # Output example
-🔴
+A       packages/hc_inventory_data/Import/HC_Inventory/INV0002 RAM Memory.xml
+A       packages/hc_inventory_data/Import/HC_Inventory/INV0003 External Harddrive.xml
+M       packages/update.mf
+M       packages/hc_inventory/Import/Form/HC_Inventory.xml
+M       packages/hc_inventory/Import/ItemType/HC_Inventory.xml
+A       packages/hc_inventory/Import/CommandBarMenu/com.aras.innovator.cui_default.toc_09471F5D71FD47F0B039BB06DB2CD293.xml
+A       packages/hc_inventory/Import/CommandBarMenuButton/com.aras.innovator.cui_default.toc_HC_Inventory_F9280F9FC1EF425AB72219C81687EAE0.xml
+A       packages/hc_inventory/Import/CommandBarSection/HC_Inventory_TOC_Content.xml
+A       packages/hc_inventory/Import/CommandBarSectionItem/1E654B3D87B04665B5C3584C22157382.xml
+A       packages/hc_inventory/Import/Form/HC_Inventory.xml
+A       packages/hc_inventory/Import/ItemType/HC_Inventory.xml
+A       packages/hc_inventory/Import/Life Cycle Map/HC_Inventory.xml
+A       packages/hc_inventory/Import/Permission/HC_Inventory.xml
+A       packages/hc_inventory/Import/PresentationConfiguration/HC_Inventory_TOC_Configuration.xml
+A       packages/hc_inventory/Import/Sequence/HC_Inventory.xml
+A       packages/update.mf
 ```
 
 Notable is that we here get duplicates, on files that has been modified more than once.  
@@ -104,7 +126,22 @@ git log --name-status --pretty="" origin/master..origin/develop | sort | uniq
 
 ``` bash
 # Output example
-🔴
+A       packages/hc_inventory/Import/CommandBarMenu/com.aras.innovator.cui_default.toc_09471F5D71FD47F0B039BB06DB2CD293.xml
+A       packages/hc_inventory/Import/CommandBarMenuButton/com.aras.innovator.cui_default.toc_HC_Inventory_F9280F9FC1EF425AB72219C81687EAE0.xml
+A       packages/hc_inventory/Import/CommandBarSection/HC_Inventory_TOC_Content.xml
+A       packages/hc_inventory/Import/CommandBarSectionItem/1E654B3D87B04665B5C3584C22157382.xml
+A       packages/hc_inventory/Import/Form/HC_Inventory.xml
+A       packages/hc_inventory/Import/ItemType/HC_Inventory.xml
+A       packages/hc_inventory/Import/Life Cycle Map/HC_Inventory.xml
+A       packages/hc_inventory/Import/Permission/HC_Inventory.xml
+A       packages/hc_inventory/Import/PresentationConfiguration/HC_Inventory_TOC_Configuration.xml
+A       packages/hc_inventory/Import/Sequence/HC_Inventory.xml
+A       packages/hc_inventory_data/Import/HC_Inventory/INV0002 RAM Memory.xml
+A       packages/hc_inventory_data/Import/HC_Inventory/INV0003 External Harddrive.xml
+A       packages/update.mf
+M       packages/hc_inventory/Import/Form/HC_Inventory.xml
+M       packages/hc_inventory/Import/ItemType/HC_Inventory.xml
+M       packages/update.mf
 ```
 
 ## Rebasing
