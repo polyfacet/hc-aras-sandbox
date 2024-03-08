@@ -32,7 +32,7 @@
    </Item>
    <Item type="Property" id="8FC07EBCE5F44EADA7A5BB088022C87B" action="add">
     <column_alignment>left</column_alignment>
-    <column_width>200</column_width>
+    <column_width>150</column_width>
     <data_type>string</data_type>
     <is_federated>0</is_federated>
     <is_hidden>0</is_hidden>
@@ -53,9 +53,10 @@
    </Item>
    <Item type="Property" id="63977C5F5B8F4A96AF6668FB4ADC2DD0" action="add">
     <column_alignment>left</column_alignment>
+    <column_width>200</column_width>
     <data_type>string</data_type>
     <is_federated>0</is_federated>
-    <is_hidden>1</is_hidden>
+    <is_hidden>0</is_hidden>
     <is_hidden2>0</is_hidden2>
     <is_indexed>0</is_indexed>
     <is_keyed>0</is_keyed>
@@ -64,7 +65,7 @@
     <label xml:lang="en">Designation</label>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
-    <sort_order>3456</sort_order>
+    <sort_order>3210</sort_order>
     <source_id keyed_name="HC_Inventory" type="ItemType" name="HC_Inventory">32F6A10EEF5C4F48ABE88713961B44CA</source_id>
     <stored_length>128</stored_length>
     <track_history>0</track_history>
