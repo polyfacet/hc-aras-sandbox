@@ -153,19 +153,28 @@ Most of the commands below you will probably do in your preferred GUI, but rarel
 # Assumption, your are in your Action branch e.g. a/9999/fix-jira-integration-bug
 
 # Switch to main branch and pull the changes
+
+``` bash
 git checkout main
 git checkout pull
+```
 
 # Switch back to previous branch
+``` bash
 git checkout -
+```
 
 # Rebase
+``` bash
 git rebase main
 ## ❗ Note that here git conflict may arise, most likely on the myupdate.mf file
 ## Any conflict must first be resolved before continuing
+```
 
 # If you have previously pushed your action-branch to gitlab you should update with the rebased local branch
+``` bash
 git push --force-with-lease
+```
 
 
 ```
@@ -175,41 +184,64 @@ git push --force-with-lease
 The base for this is "git log"
 
 To view the changes done for a specific file:
+
+``` bash
 git log -- src/packages/PLM/Import/Method/PE_ManualRelease.xml
+```
 
 Even simpler - which also shows moved file:
+
+``` bash
 git log -- *PE_ManualRelease.xml
+```
 
 To include the changes in each change, use the patch flag:
+
+``` bash
 git log -p -- src/packages/PLM/Import/Method/PE_ManualRelease.xml
 git log -p -- *PE_ManualRelease.xml
+```
 
 As I think the "log" is kind of difficult to read, I rather use an alternative alias "l" for log like:
+
+``` bash
 git l -- *PE_ManualRelease.xml
+```
 
 Set the alias with:
+``` bash
 git config --global alias.l "log --pretty='format:%Cblue%cr %Creset%s %Cblue%an %Cred%d %Cgreen%h'"
+```
 
 Another example:
 This shows all the changed "PLM" methods that are named like "Action" and which files that were changed in each commit:
+
+``` bash
 git l --name-status -- src/packages/PLM/Import/Method/*Action*
+```
 
 ## Searching
 
 ### Searching commit messages
 
 Set the alias "find":
+``` bash
 git config --global alias.find "log -i --pretty=\"format:%Cgreen%h %Cred%cr %Cblue%s %Cred%an\" --name-status --grep"
+```
 
 To find commit messages having Issue-1628
+``` bash
 git find Issue-1628
+```
 
 ### Searching changed contents
 
 Below is two example for typically find code changes that contains "Part Document" and "team_id", i.e. item.getRelationships("Part Document") or item.setProperty("team_id")
 
+``` bash
 git log --oneline -S '"Part Document"' -i
 git log --oneline -S '"team_id"'
+```
 
 -S is called the "pickaxe", and -i is used to make the search case insensitive.
 
