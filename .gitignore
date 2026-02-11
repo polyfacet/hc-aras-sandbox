@@ -1,5 +1,4 @@
 scripts/deploy/stage.log
-scripts/deploy/stage/**
-scripts/deploy/Deploy**
+**/stage/**
 **/log/*
 WIP-Notes.md
