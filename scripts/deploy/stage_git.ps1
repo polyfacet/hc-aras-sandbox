@@ -1,12 +1,12 @@
-$STAGE_DIR = "stage\"
+$STAGE_DIR = "$PSScriptRoot\stage\"
+$ROOT_DIR = "$PSScriptRoot\..\.."
+$FROM_DATE = Get-Content $PSScriptRoot\stage_from_date.txt -First 1
 
-$currentBranch = git branch --show-current
-"Current Branch " + $currentBranch
-Write-Host -ForegroundColor Cyan "Running local build on branch $currentBranch"
+Write-Host -ForegroundColor Cyan "Staging git changes for: '$env'"
 
-$FROM_DATE = Get-Content .\stage_from_date.txt -First 1
+Write-Host -ForegroundColor Cyan "Running deploy from branch $env:CI_COMMIT_BRANCH"
 Write-Host -ForegroundColor Cyan "Staging with git from: " $FROM_DATE
-git log --name-status --pretty="" --after=$FROM_DATE | Sort-Object -unique  > stage.log
+git log --name-status --pretty="" --after=$FROM_DATE  > stage.log
 
 #Clean stage sub dirs
 if(Test-Path $STAGE_DIR) {
@@ -26,21 +26,21 @@ foreach ($line in $content)
 	$modfiedFile = $action -Match "M"
 	if ($addedFile -OR $modfiedFile) {
 		$fileToAdd = $filePath
-		if (-NOT ($filePath.StartsWith("packages") -OR $filePath.StartsWith("webapp"))) {
-			continue
-		}
 		#Write-Host -ForegroundColor Green $fileToAdd
 		$fileToAdd
 		
 		$folder = Split-Path -parent $fileToAdd
 		$folder = $STAGE_DIR + $folder
 		
-		$fileToAdd = "..\..\$fileToAdd"
+		$fileToAdd = "$ROOT_DIR\$fileToAdd"
 		# Create folder, silent output
 		New-Item -ItemType Directory -Force -Path $folder | Out-Null 
 
+
 		#Copy files, if exists
 		if(Test-Path $fileToAdd) {
+			#Write-Host -ForegroundColor Green "Folder: $folder"
+			#Write-Host -ForegroundColor Green "File to add: $fileToAdd"
 			Copy-Item $fileToAdd $folder
 			$fileCount = $fileCount + 1
 		}
@@ -52,13 +52,18 @@ foreach ($line in $content)
 	}
 }
 
-if ($doZip -eq "--zip") {
-	Write-Host "Zipping file to : .\.\stage\Deploy.zip"
-	Compress-Archive -Path .\stage -DestinationPath .\stage\Deploy.zip
-	explorer.exe .\stage
+# Copy environment specific files into stage
+$envDir = "$STAGE_DIR"+"env\"+$env
+Write-Host "Envdir: $envDir"
+if(Test-Path $envDir) {
+	Write-Host "Copying environment specific files into stage for: '$env'"
+	Copy-Item -Recurse "$envDir\*" $STAGE_DIR 
+}
+else {
+	Write-Host "No environment specific changes for: '$env'"
 }
 
-Write-Host  "Staging Completed, file count: $fileCount" 
+Write-Host  -ForegroundColor Cyan "Staging Completed, file count: $fileCount" 
 $commitHash = git rev-parse HEAD 
 Write-Host "Commit hash: $commitHash"  
 #Return $commitHash
