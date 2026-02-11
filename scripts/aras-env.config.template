@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Configs>
+  <Environments>
+    <Environment>
+      <Name>dev</Name>
+      <ArasConnection>
+        <Url>http://localhost/DevR31</Url>
+        <Db>DevR31</Db>
+        <User>root</User>
+        <Password>innovator</Password>
+        <TimeoutSeconds>90</TimeoutSeconds>
+      </ArasConnection>
+      <Database>
+        <Sqlcmd>sqlcmd.exe</Sqlcmd>
+        <Server>.\</Server>
+        <DBName>DevR31</DBName>
+        <BackupDirectory>C:\SQL\Backup\Dev</BackupDirectory>
+        <DBBaselineBackPath>C:\SQL\Backup\DevR31\DevBaseline_R31.0.0.bak</DBBaselineBackPath>
+      </Database>
+      <Import>
+        <ConsoleUpgradePath>C:\apps\Aras\R31\PackageImportExportUtilities\ConsoleUpgrade\ConsoleUpgrade.exe</ConsoleUpgradePath>
+      </Import>
+      <WebAppPath>C:\Dev\Webapps\Aras\DevR31\Innovator\</WebAppPath>
+    </Environment>
+  </Environments>
+</Configs>
